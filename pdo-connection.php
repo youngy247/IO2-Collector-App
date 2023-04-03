@@ -32,7 +32,8 @@ $pdo = connectToDb($db);
 $query = $pdo->prepare('SELECT `players`.`id`,`players`.`name`,`players`.`attack`, `players`.`defence`
                         ,`clubs`.`name` as `club_name`, `position`.`name` as `position` FROM `players` 
                           INNER JOIN `clubs` ON `players`.`club_id` = `clubs`.`id` 
-                          INNER JOIN `position` ON `players`.`position_id` = `position`.`id`');
+                          INNER JOIN `position` ON `players`.`position_id` = `position`.`id`
+                          ORDER BY `players`.`id`');
 
 // Execute query
 $query->execute();
