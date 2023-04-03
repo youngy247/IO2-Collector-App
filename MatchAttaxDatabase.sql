@@ -13,6 +13,7 @@ CREATE TABLE player_stats (
                                      defense INT(11) NOT NULL,
                                      position VARCHAR(255) NOT NULL,
                                      star_rating INT(11) NOT NULL,
+                                     rarity VARCHAR(255) NOT NULL,
                                      PRIMARY KEY (id),
                                      FOREIGN KEY (player_id) REFERENCES players(id)
   );
