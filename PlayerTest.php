@@ -105,6 +105,14 @@ class PlayerTest extends TestCase
         new Player('Lionel Messi', 99, 50, 'FC Barcelona', 'InvalidPosition');
     }
 
+    public function testSetPositionIdWithInvalidPosition()
+    {
+        $player = new Player('Lionel Messi', 99, 50, 'FC Barcelona', 'Forward');
+
+        $this->expectException(InvalidArgumentException::class);
+        $player->setPositionId('InvalidPosition');
+    }
+
     public function testMultiplePositions(): void
     {
         $this->expectException(InvalidArgumentException::class);
