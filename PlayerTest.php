@@ -37,6 +37,13 @@ class PlayerTest extends TestCase
         $player = new Player('John Doe', 80, 70, '1234', 'Defender');
         $this->assertEquals(80, $player->getAttack());
     }
+
+    public function testSetAttack()
+    {
+        $player = new Player('John Doe', 80, 70, '1234', 'Defender');
+        $player->setAttack(90);
+        $this->assertEquals(90, $player->getAttack());
+    }
     public function testValidPosition(): void
     {
         $player = new Player('Lionel Messi', 99, 50, 'FC Barcelona', 'Forward');
