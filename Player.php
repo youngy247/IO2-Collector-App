@@ -10,7 +10,7 @@ class Player
 
     private string $club_id;
     private string $position_id;
-
+    // use '?string' to either be string or null for the optional properties when you click on the card
     public function __construct
     (
         string $name, int $attack, int $defence, string $club_id, string $position_id, int $id = -1
