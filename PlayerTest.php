@@ -12,4 +12,19 @@ class PlayerTest extends TestCase
         $this->assertEquals(50, $player->getDefence());
         $this->assertEquals('FC Barcelona', $player->getClubId());
     }
+
+    public function testValidPosition(): void
+    {
+        $player = new Player('Lionel Messi', 99, 50, 'FC Barcelona', 'Forward');
+        $this->assertEquals('Forward', $player->getPositionId());
+
+        $player->setPositionId('Defender');
+        $this->assertEquals('Defender', $player->getPositionId());
+
+        $player->setPositionId('Midfielder');
+        $this->assertEquals('Midfielder', $player->getPositionId());
+
+        $player->setPositionId('Goalkeeper');
+        $this->assertEquals('Goalkeeper', $player->getPositionId());
+    }
 }
