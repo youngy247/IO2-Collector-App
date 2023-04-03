@@ -21,7 +21,7 @@ class Player
         $this->attack = $attack;
         $this->defence = $defence;
         $this->club_id = $club_id;
-        $this->position_id = $position_id;
+        $this->setPositionId($position_id);
     }
 
     /**
@@ -89,7 +89,7 @@ class Player
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getClubId(): string
     {
@@ -97,7 +97,7 @@ class Player
     }
 
     /**
-     * @param int $club_id
+     * @param string $club_id
      */
     public function setClubId(string $club_id): void
     {
@@ -105,18 +105,23 @@ class Player
     }
 
     /**
-     * @return int
+     * @return string
      */
+
     public function getPositionId(): string
     {
         return $this->position_id;
     }
 
     /**
-     * @param int $position_id
+     * @param string $position_id
      */
     public function setPositionId(string $position_id): void
     {
+        $allowedPositions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
+        if (!in_array($position_id, $allowedPositions)) {
+            throw new InvalidArgumentException('Invalid position id');
+        }
         $this->position_id = $position_id;
     }
 }
