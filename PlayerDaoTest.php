@@ -10,4 +10,15 @@ class PlayerDaoTest extends TestCase {
     {
         $this->playerDao = new PlayerDao();
     }
+
+    public function testFetchAllReturnsArrayOfPlayers()
+    {
+        $players = $this->playerDao->fetchAll();
+
+        $this->assertIsArray($players);
+
+        foreach ($players as $player) {
+            $this->assertInstanceOf(Player::class, $player);
+        }
+    }
 }
