@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.11.2-MariaDB-1:10.11.2+maria~ubu2204)
 # Database: MatchAttax
-# Generation Time: 2023-04-03 10:19:42 +0000
+# Generation Time: 2023-04-03 13:29:16 +0000
 # ************************************************************
 
 
@@ -53,11 +53,10 @@ DROP TABLE IF EXISTS `player_stats`;
 CREATE TABLE `player_stats` (
                                 `id` int(11) NOT NULL AUTO_INCREMENT,
                                 `player_id` int(11) NOT NULL,
-                                `attack` int(11) NOT NULL,
-                                `defense` int(11) NOT NULL,
-                                `position` varchar(255) NOT NULL,
                                 `star_rating` int(11) NOT NULL,
                                 `rarity` varchar(255) NOT NULL,
+                                `dob` date NOT NULL,
+                                `country` varchar(255) NOT NULL,
                                 PRIMARY KEY (`id`),
                                 KEY `player_id` (`player_id`),
                                 CONSTRAINT `player_stats_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
@@ -73,22 +72,50 @@ DROP TABLE IF EXISTS `players`;
 CREATE TABLE `players` (
                            `id` int(11) NOT NULL AUTO_INCREMENT,
                            `name` varchar(255) NOT NULL,
-                           `dob` date NOT NULL,
-                           `country` varchar(255) NOT NULL,
                            `club_id` int(11) NOT NULL,
+                           `attack` int(11) NOT NULL,
+                           `defence` int(11) NOT NULL,
+                           `position_id` int(11) NOT NULL,
                            PRIMARY KEY (`id`),
                            KEY `club_id` (`club_id`),
-                           CONSTRAINT `players_ibfk_1` FOREIGN KEY (`club_id`) REFERENCES `clubs` (`id`)
+                           KEY `players_position_fk` (`position_id`),
+                           CONSTRAINT `players_ibfk_1` FOREIGN KEY (`club_id`) REFERENCES `clubs` (`id`),
+                           CONSTRAINT `players_position_fk` FOREIGN KEY (`position_id`) REFERENCES `position` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 LOCK TABLES `players` WRITE;
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
 
-INSERT INTO `players` (`id`, `name`, `dob`, `country`, `club_id`)
+INSERT INTO `players` (`id`, `name`, `club_id`, `attack`, `defence`, `position_id`)
 VALUES
-    (1,'John Smith','1993-04-02','England',1);
+    (1,'John Smith',1,72,87,2);
 
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table position
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `position`;
+
+CREATE TABLE `position` (
+                            `id` int(11) NOT NULL AUTO_INCREMENT,
+                            `name` varchar(255) NOT NULL,
+                            PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+LOCK TABLES `position` WRITE;
+/*!40000 ALTER TABLE `position` DISABLE KEYS */;
+
+INSERT INTO `position` (`id`, `name`)
+VALUES
+    (1,'Goalkeeper'),
+    (2,'Defender'),
+    (3,'Midfielder'),
+    (4,'Forward');
+
+/*!40000 ALTER TABLE `position` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
