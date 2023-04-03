@@ -37,5 +37,5 @@ $players = $playerDao->fetchAll();
 
 // print out the name and club name of each player in the array
 foreach ($players as $player) {
-    echo $player->getName() . ' plays for ' . $player->getClubName() . '<br>';
+    echo $player->getName() . ' plays for ' . $player->getClubId() . '<br>';
 }
