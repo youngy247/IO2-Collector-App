@@ -28,3 +28,14 @@ class PlayerDao
         return $players;
     }
 }
+
+// create a new instance of the PlayerDao class
+$playerDao = new PlayerDao();
+
+// call the fetchAll() function to get an array of player objects
+$players = $playerDao->fetchAll();
+
+// print out the name and club name of each player in the array
+foreach ($players as $player) {
+    echo $player->getName() . ' plays for ' . $player->getClubName() . '<br>';
+}
