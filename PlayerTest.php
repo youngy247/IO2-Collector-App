@@ -88,6 +88,17 @@ class PlayerTest extends TestCase
         $this->assertEquals('Goalkeeper', $player->getPositionId());
     }
 
+    public function testSetPositionIdWithArrayOfValidPositions()
+    {
+        $player = new Player('Lionel Messi', 99, 50, 'FC Barcelona', 'Forward');
+
+        $positions = ['Forward', 'Defender', 'Midfielder', 'Goalkeeper'];
+        foreach ($positions as $position) {
+            $player->setPositionId($position);
+            $this->assertEquals($position, $player->getPositionId());
+        }
+    }
+
     public function testInvalidPosition(): void
     {
         $this->expectException(InvalidArgumentException::class);
