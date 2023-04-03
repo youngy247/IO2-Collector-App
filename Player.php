@@ -1,6 +1,6 @@
 <?php
 
-class player
+class Player
 {
     private int $id;
     private string $name;
