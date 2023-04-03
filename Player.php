@@ -8,12 +8,12 @@ class Player
     private int $attack;
     private int $defence;
 
-    private int $club_id;
-    private int $position_id;
+    private string $club_id;
+    private string $position_id;
 
     public function __construct
     (
-        string $name, int $attack, int $defence, int $club_id, int $position_id, int $id = -1
+        string $name, int $attack, int $defence, string $club_id, string $position_id, int $id = -1
     )
     {
         $this->id = $id;
@@ -91,7 +91,7 @@ class Player
     /**
      * @return int
      */
-    public function getClubId(): int
+    public function getClubId(): string
     {
         return $this->club_id;
     }
@@ -99,7 +99,7 @@ class Player
     /**
      * @param int $club_id
      */
-    public function setClubId(int $club_id): void
+    public function setClubId(string $club_id): void
     {
         $this->club_id = $club_id;
     }
@@ -107,7 +107,7 @@ class Player
     /**
      * @return int
      */
-    public function getPositionId(): int
+    public function getPositionId(): string
     {
         return $this->position_id;
     }
@@ -115,7 +115,7 @@ class Player
     /**
      * @param int $position_id
      */
-    public function setPositionId(int $position_id): void
+    public function setPositionId(string $position_id): void
     {
         $this->position_id = $position_id;
     }

@@ -21,7 +21,7 @@ class PlayerDao
 
         $players = [];
         foreach ($rows as $row) {
-            $player = new player($row['name'], $row['attack'], $row['defence'], $row['club_id'], $row['position_id'],$row['id']);
+            $player = new player($row['name'], $row['attack'], $row['defence'], $row['club_name'], $row['position'],$row['id']);
             $players[] = $player;
         }
 
