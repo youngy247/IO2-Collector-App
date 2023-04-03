@@ -21,4 +21,18 @@ class PlayerDaoTest extends TestCase {
             $this->assertInstanceOf(Player::class, $player);
         }
     }
+
+    public function testFetchedPlayersContainCorrectData()
+    {
+        $players = $this->playerDao->fetchAll();
+
+        foreach ($players as $player) {
+            $this->assertNotEmpty($player->getId());
+            $this->assertNotEmpty($player->getName());
+            $this->assertNotEmpty($player->getClubId());
+            $this->assertNotEmpty($player->getPositionId());
+            $this->assertNotEmpty($player->getAttack());
+            $this->assertNotEmpty($player->getDefence());
+        }
+    }
 }
