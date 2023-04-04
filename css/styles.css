@@ -1,4 +1,10 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+.player-card {
+  padding: 2rem;
+}
 
+.player-card img {
+  width: 10rem;
+}
