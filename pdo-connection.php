@@ -24,23 +24,3 @@ function connectToDb(string $db): PDO
 
     return $pdo;
 }
-
-// Call connectToDb() to get a PDO object
-$pdo = connectToDb($db);
-
-// Prepare SQL query
-$query = $pdo->prepare('SELECT `players`.`id`,`players`.`name`,`players`.`attack`, `players`.`defence`
-                        ,`clubs`.`name` as `club_name`, `position`.`name` as `position` FROM `players` 
-                          INNER JOIN `clubs` ON `players`.`club_id` = `clubs`.`id` 
-                          INNER JOIN `position` ON `players`.`position_id` = `position`.`id`
-                          ORDER BY `players`.`id`');
-
-// Execute query
-$query->execute();
-
-// Now we can get the result
-$result = $query->fetchAll();
-
-echo '<pre>';
-print_r($result);
-echo '</pre>';

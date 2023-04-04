@@ -63,7 +63,7 @@ foreach ($players as $player) {
         . '<p>Attack: ' . $player->getAttack() . '</p>'
         . '<p>Defence: ' . $player->getDefence() . '</p>'
         . '<p>Club: ' . $player->getClubId() . '</p>'
-        . '<p>Position: ' . $player->getPosition() . '</p>'
+        . '<p>Position: ' . $player->getPositionId() . '</p>'
         . '</div>';
 }
 echo $html;
