@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  background: #454545;
+  color: #e4fde1;
+}
+
 h1 {
   text-align: center;
   font-size: 5.85rem;
