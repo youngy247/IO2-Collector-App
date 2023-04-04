@@ -16,8 +16,10 @@ require_once 'index.html';
         </ul>
     </nav>
     <h1>Match Attax</h1>
+    <hr class="divider" />
 
     <section id="collection">
+        <h2>Your Collection:</h2>
 <?php
 
 $html = '<div class="card-grid">';
