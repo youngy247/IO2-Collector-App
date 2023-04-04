@@ -17,8 +17,18 @@ html {
 
 .links-container{
   display: flex;
+  column-gap: 5rem;
+  margin-right: 4rem;
   justify-content: flex-end;
+  list-style: none;
 }
+
+.links-container a {
+  font-size: 2.5vw;
+  text-decoration: none;
+  color: #e4fde1;
+}
+
 h1 {
   text-align: center;
   font-size: 5.85rem;
