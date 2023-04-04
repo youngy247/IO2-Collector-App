@@ -27,94 +27,56 @@ class Player
         $this->image = $image;
     }
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param int $id
-     */
-
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return int
-     */
     public function getAttack(): int
     {
         return $this->attack;
     }
 
-    /**
-     * @param int $attack
-     */
     public function setAttack(int $attack): void
     {
         $this->attack = $attack;
     }
 
-    /**
-     * @return int
-     */
     public function getDefence(): int
     {
         return $this->defence;
     }
 
-    /**
-     * @param int $defence
-     */
     public function setDefence(int $defence): void
     {
         $this->defence = $defence;
     }
 
-    /**
-     * @return string
-     */
     public function getClubId(): string
     {
         return $this->club_id;
     }
 
-    /**
-     * @param string $club_id
-     */
     public function setClubId(string $club_id): void
     {
         $this->club_id = $club_id;
     }
-
-    /**
-     * @return string
-     */
 
     public function getPositionId(): string
     {
         return $this->position_id;
     }
 
-    /**
-     * @param string $position_id
-     */
     public function setPositionId(string $position_id): void
     {
         $allowedPositions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
