@@ -1,6 +1,7 @@
 <?php
 
 require_once 'PlayerDao.php';
+require_once 'functions.php';
 
 $playerDao = new PlayerDao();
 
@@ -20,20 +21,9 @@ require_once 'index.html';
     <section id="collection">
 <?php
 
-$html = '<div class="card-grid">';
-foreach ($players as $player) {
-    $html .= '<div class="player-card">' .
-        '<img src="'.$player->getImage().'" alt="A ' . $player->getName() . '">'
-        . '<p>Name: ' . $player->getName() . '</p>'
-        . '<p>Attack: ' . $player->getAttack() . '</p>'
-        . '<p>Defence: ' . $player->getDefence() . '</p>'
-        . '<p>Club: ' . $player->getClubId() . '</p>'
-        . '<p>Position: ' . $player->getPositionId() . '</p>'
-        . '</div>';
-}
-$html .= '</div>';
 
-echo $html;
+
+echo returnHtmlFromArray($players);
 
 ?>
     </section>
