@@ -37,7 +37,9 @@ html {
 h1 {
   text-align: center;
   font-size: 5.85rem;
+  font-weight: 900;
   padding: 1rem;
+  color: #db5921;
 }
 
 .card-grid {
