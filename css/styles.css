@@ -15,6 +15,11 @@ html {
   background-color: #432929;
 }
 
+.navbar a:hover {
+  color: #db5921;
+  transition: ease-in 0.25s;
+}
+
 .links-container{
   display: flex;
   column-gap: 5rem;
