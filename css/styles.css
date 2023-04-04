@@ -8,12 +8,17 @@ html {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
   width: 100vw;
-  display: flex;
-  justify-content: space-between;
+  height: 5rem;
   background-color: #432929;
 }
 
+.links-container{
+  display: flex;
+  justify-content: flex-end;
+}
 h1 {
   text-align: center;
   font-size: 5.85rem;
