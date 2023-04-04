@@ -11,9 +11,11 @@ class Player
     private string $club_id;
     private string $position_id;
     // use '?string' to either be string or null for the optional properties when you click on the card
+
+    private string $image;
     public function __construct
     (
-        string $name, int $attack, int $defence, string $club_id, string $position_id, int $id = -1
+        string $name, int $attack, int $defence, string $club_id, string $position_id, string $image, int $id = -1
     )
     {
         $this->id = $id;
@@ -22,6 +24,7 @@ class Player
         $this->defence = $defence;
         $this->club_id = $club_id;
         $this->setPositionId($position_id);
+        $this->image = $image;
     }
 
     /**
@@ -119,5 +122,10 @@ class Player
             throw new InvalidArgumentException('Invalid position id');
         }
         $this->position_id = $position_id;
+    }
+
+    public function getImage(): string
+    {
+        return $this->image;
     }
 }

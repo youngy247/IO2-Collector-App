@@ -24,3 +24,5 @@ function connectToDb(string $db): PDO
 
     return $pdo;
 }
+
+
