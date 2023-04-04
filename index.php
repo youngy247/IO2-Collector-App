@@ -56,9 +56,9 @@ $cloudinary->image('olympic_flag')->resize(Resize::fill(100, 150))->toUrl();
 
 
 
-$html = '';
+$html = '<div class="card-grid">';
 foreach ($players as $player) {
-    $html .= '<div class="player-card">' . 
+    $html .= '<div class="player-card">' .
         '<img src="'.$player->getImage().'" alt="A ' . $player->getName() . '">'
         . '<p>Name: ' . $player->getName() . '</p>'
         . '<p>Attack: ' . $player->getAttack() . '</p>'
@@ -67,5 +67,9 @@ foreach ($players as $player) {
         . '<p>Position: ' . $player->getPositionId() . '</p>'
         . '</div>';
 }
+$html .= '</div>';
+
 echo $html;
+
 ?>
+
