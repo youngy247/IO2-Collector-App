@@ -29,10 +29,16 @@ $players = $playerDao->fetchAll();
     </head>
 
     <body>
+    <nav class="navbar">
+        <ul class="links-container">
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#add-card-section">Add Card</a></li>
 
+        </ul>
+    </nav>
     <h1>Match Attax</h1>
 
-    <section class="collection">
+    <section id="collection">
 <?php
 use Cloudinary\Cloudinary;
 use Cloudinary\Transformation\Resize;
@@ -72,4 +78,4 @@ $html .= '</div>';
 echo $html;
 
 ?>
-
+        <section id="add-card-section"></section>
