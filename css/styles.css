@@ -2,3 +2,60 @@
   box-sizing: border-box;
 }
 
+html {
+  background: #454545;
+  color: #e4fde1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: #432929;
+}
+
+.navbar a:hover {
+  color: #db5921;
+  transition: ease-in 0.25s;
+}
+
+.links-container{
+  display: flex;
+  column-gap: 5rem;
+  margin-right: 4rem;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.links-container a {
+  font-size: 2.5vw;
+  text-decoration: none;
+  color: #e4fde1;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5.85rem;
+  font-weight: 900;
+  padding: 2rem 0 1rem 0;
+  color: #db5921;
+}
+
+section {
+  padding-top: 0.4rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.player-card {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.player-card img {
+  width: 10rem;
+}
