@@ -1,6 +1,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+h1 {
+  text-align: center;
+  font-size: 5.85rem;
+  padding: 1rem;
+}
 .player-card {
   padding: 2rem;
 }
