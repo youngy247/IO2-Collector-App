@@ -49,7 +49,7 @@ section {
 
 .card-grid {
   display: grid;
-  grid-template-columns: auto);
+  grid-template-columns: auto;
   gap: 2rem;
 }
 
