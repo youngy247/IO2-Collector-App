@@ -5,6 +5,25 @@ require_once 'functions.php';
 
 class functionsTest extends TestCase
 {
+    public function testReturnHtmlFromArrayWithOnePlayer()
+    {
+        $players = [
+            new Player('image1.jpg', 'Player 1', 80, 70, 'club1', 'Defender')
+        ];
+        $expectedHtml = '<div class="card-grid">' .
+            '<div class="player-card">' .
+            '<img src="image1.jpg" alt="A Player 1">' .
+            '<p>Name: Player 1</p>' .
+            '<p>Attack: 80</p>' .
+            '<p>Defence: 70</p>' .
+            '<p>Club: club1</p>' .
+            '<p>Position: Defender</p>' .
+            '</div>' .
+            '</div>';
+
+        $this->assertEquals($expectedHtml, returnHtmlFromArray($players));
+    }
+
     public function testReturnHtmlFromArray()
     {
         $players = [
