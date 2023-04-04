@@ -15,7 +15,7 @@ class Player
     private string $image;
     public function __construct
     (
-        string $name, int $attack, int $defence, string $club_id, string $position_id, string $image, int $id = -1
+        string $image, string $name, int $attack, int $defence, string $club_id, string $position_id, int $id = -1
     )
     {
         $this->id = $id;
