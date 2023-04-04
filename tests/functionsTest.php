@@ -61,4 +61,12 @@ class functionsTest extends TestCase
 
         $this->assertEquals($expectedHtml, returnHtmlFromArray($players));
     }
+
+    public function testReturnHtmlFromArrayWithNoPlayers()
+    {
+        $players = [];
+        $expectedHtml = '<div class="card-grid"></div>';
+
+        $this->assertEquals($expectedHtml, returnHtmlFromArray($players));
+    }
 }
