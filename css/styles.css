@@ -30,16 +30,16 @@ html {
 }
 
 .links-container a {
-  font-size: 4vw;
+  font-size: 2.5vw;
   text-decoration: none;
   color: #e4fde1;
 }
 
 h1 {
   text-align: center;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 900;
-  padding: 2rem 0 1rem 0;
+  padding: 4.5rem 0 1rem 0;
   color: #db5921;
 }
 
@@ -68,6 +68,9 @@ section {
 @media only screen and (max-width: 600px) {
   .player-card p {
     font-size: 1.5rem;
+  }
+  .links-container a {
+    font-size: 5vw;
   }
 }
 
