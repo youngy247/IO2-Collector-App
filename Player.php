@@ -7,7 +7,6 @@ class Player
     private string $name;
     private int $attack;
     private int $defence;
-
     private string $club_id;
     private string $position_id;
     // use '?string' to either be string or null for the optional properties when you click on the card
