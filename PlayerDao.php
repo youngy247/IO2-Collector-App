@@ -12,7 +12,7 @@ class PlayerDao
     }
     public function fetchAll(): array
     {
-        $sql = 'SELECT `players`.`id`,`players`.`name`,`players`.`attack`, `players`.`defence`
+        $sql = 'SELECT `players`.`image`,`players`.`id`,`players`.`name`,`players`.`attack`, `players`.`defence`
                         ,`clubs`.`name` as `club_name`, `position`.`name` as `position` FROM `players`
                           INNER JOIN `clubs` ON `players`.`club_id` = `clubs`.`id`
                           INNER JOIN `position` ON `players`.`position_id` = `position`.`id`
@@ -23,7 +23,7 @@ class PlayerDao
 
         $players = [];
         foreach ($rows as $row) {
-            $player = new player($row['name'], $row['attack'], $row['defence'], $row['club_name'], $row['position'],$row['id']);
+            $player = new player($row['image'], $row['name'], $row['attack'], $row['defence'], $row['club_name'], $row['position'],$row['id']);
             $players[] = $player;
         }
 
