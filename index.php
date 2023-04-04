@@ -37,7 +37,3 @@ echo $html;
 
 ?>
     </section>
-
-    <section id="add-card-section">
-
-    </section>
