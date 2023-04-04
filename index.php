@@ -1,6 +1,13 @@
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+require_once 'PlayerDao.php';
 
+$playerDao = new PlayerDao();
+
+$players = $playerDao->fetchAll();
+?>
+
+<?php
 use Cloudinary\Cloudinary;
 use Cloudinary\Transformation\Resize;
 
@@ -21,3 +28,15 @@ $cloudinary->uploadApi()->upload(
 
 $cloudinary->image('olympic_flag')->resize(Resize::fill(100, 150))->toUrl();
 
+
+
+$html = '';
+foreach ($pigs as $pig) {
+    $html .= '<div class="pig-card">'
+        . '<p>Name: ' . $pig->getName() . '</p>'
+        . '<p>Weight: ' . $pig->getWeight() . '</p>'
+        . '<p>Colour: ' . $pig->getColour() . '</p>'
+        . '</div>';
+}
+echo $html;
+?>
