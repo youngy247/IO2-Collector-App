@@ -18,6 +18,7 @@ require_once 'index.html';
     <h1>Match Attax</h1>
 
     <section id="collection">
+        <h2>Your Collection:</h2>
 <?php
 
 $html = '<div class="card-grid">';
