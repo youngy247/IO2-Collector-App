@@ -57,4 +57,8 @@ $html .= '</div>';
 echo $html;
 
 ?>
-        <section id="add-card-section"></section>
+    </section>
+
+    <section id="add-card-section">
+
+    </section>
