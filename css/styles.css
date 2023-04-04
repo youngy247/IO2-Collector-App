@@ -78,4 +78,8 @@ section {
   .card-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  .links-container {
+    gap: 4rem;
+    padding-right: 2rem;
+  }
 }
