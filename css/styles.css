@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -10,8 +12,7 @@ html {
 .navbar {
   position: fixed;
   top: 0;
-  width: 100vw;
-  height: 5rem;
+  width: 100%;
   background-color: #432929;
 }
 
@@ -20,23 +21,23 @@ html {
   transition: ease-in 0.25s;
 }
 
-.links-container{
+.links-container {
   display: flex;
-  column-gap: 5rem;
-  margin-right: 4rem;
+  gap: 2rem;
+  margin-right: 2rem;
   justify-content: flex-end;
   list-style: none;
 }
 
 .links-container a {
-  font-size: 2.5vw;
+  font-size: 4vw;
   text-decoration: none;
   color: #e4fde1;
 }
 
 h1 {
   text-align: center;
-  font-size: 5.85rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   padding: 2rem 0 1rem 0;
   color: #db5921;
@@ -48,14 +49,28 @@ section {
 
 .card-grid {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto);
+  gap: 2rem;
 }
 
 .player-card {
   padding: 2rem;
   margin: 0 auto;
+  text-align: center;
 }
 
 .player-card img {
-  width: 10rem;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .player-card p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
