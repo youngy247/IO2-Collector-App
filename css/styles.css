@@ -7,6 +7,13 @@ html {
   color: #e4fde1;
 }
 
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #432929;
+}
+
 h1 {
   text-align: center;
   font-size: 5.85rem;
