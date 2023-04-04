@@ -123,4 +123,9 @@ class Player
         }
         $this->position_id = $position_id;
     }
+
+    public function getImage(): string
+    {
+        return $this->image;
+    }
 }
