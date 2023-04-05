@@ -39,3 +39,5 @@ echo $html;
 
 ?>
     </section>
+    </body>
+</html>
