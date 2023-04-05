@@ -3,9 +3,19 @@
 require_once 'index.html';
 ?>
 <body>
+<nav class="navbar">
+    <ul class="links-container">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="form.php">Add Card</a></li>
+
+    </ul>
+</nav>
+
+<section id="collection">
+    <h1 class="form-header">Add A Player</h1>
+    <hr class="divider" />
 
 <form action="addPlayer.php" method="post">
-    <h1 class="form-header">Add A Player</h1>
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" required>
 
@@ -54,5 +64,6 @@ require_once 'index.html';
 
     <button type="submit">Add player</button>
 </form>
+</section>
 
 </body>
