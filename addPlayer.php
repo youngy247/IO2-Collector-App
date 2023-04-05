@@ -1,6 +1,7 @@
 <?php
 require_once 'Player.php';
 require_once 'pdo-connection.php';
+require_once 'PlayerManager.php';
 
 // Retrieve the form data
 $name = $_POST['name'];
