@@ -4,7 +4,7 @@ function returnHtmlFromArray(array $players): string {
     $html = '<div class="card-grid">';
     foreach ($players as $player) {
         $html .= '<div class="player-card">' .
-            '<p>'. $player->getName() .'</p>' .
+            '<p class="player-name">'. $player->getName() .'</p>' .
             '<img src="'.$player->getImage().'" alt="A ' . $player->getName() .'">'
 //            . '<p>Name: ' . $player->getName() . '</p>'
             . '<p>Attack: ' . $player->getAttack() . '</p>'
