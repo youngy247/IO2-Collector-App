@@ -32,6 +32,6 @@ class PlayerManager
             'position_id' => $player->getPositionId(),
             'image' => $player->getImage(),
         ]);
-        $player->setId($this->pdo->lastInsertId());
+        $player->setId($this->db->lastInsertId());
     }
 }
