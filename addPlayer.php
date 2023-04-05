@@ -20,4 +20,4 @@ $db = new PlayerManager();
 $db->insertPlayer($player);
 
 // Redirect the user to the collection page
-header('Location: index.php?test=hi');
+header('Location: index.php);

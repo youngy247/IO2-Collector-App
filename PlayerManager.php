@@ -20,7 +20,6 @@ class PlayerManager
             throw new InvalidArgumentException('Invalid player data');
         }
 
-
         $insert = $this->db->prepare(
             'INSERT INTO 
     players (name, attack, defence, club_id, position_id, image) 

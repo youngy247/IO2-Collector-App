@@ -83,12 +83,15 @@ class Player
 
     public function setPositionId(string $position_id): void
     {
-        $allowedPositions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
-        if (!in_array($position_id, $allowedPositions)) {
-            throw new InvalidArgumentException('Invalid position id');
-        }
-        $this->position_id = array_search($position_id, $allowedPositions) + 1;
+        // could not get this validation to work
+//        var_dump($position_id);
+//        $allowedPositions = ['1'=>'Goalkeeper', '2'=>'Defender', '3'=>'Midfielder', '4'=>'Forward'];
+//        if (!in_array($position_id, array_keys($allowedPositions))) {
+//            throw new InvalidArgumentException('Invalid position id');
+//        }
+        $this->position_id = $position_id;
     }
+
 
     public function getImage(): string
     {
