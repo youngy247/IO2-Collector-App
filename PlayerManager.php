@@ -12,7 +12,7 @@ class PlayerManager
         $this->db = connectToDb('MatchAttax'); // Database injection
     }
 
-    public function insertPlayer(Player $player)
+    public function insertPlayer(Player $player): string
     {
         // Validate the Player object
         if (!$player->getName() || !$player->getAttack() || !$player->getDefence() ||
