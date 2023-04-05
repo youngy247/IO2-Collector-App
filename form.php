@@ -17,26 +17,26 @@ require_once 'index.html';
     <label for="club_id">Club:</label>
     <select id="club_id" name="club_id">
         <option value="">Select a club</option>
-        <option value="Arsenal">Arsenal</option>
-        <option value="Aston Villa">Aston Villa</option>
-        <option value="Blackburn Rovers">Blackburn Rovers</option>
-        <option value="Bolton Wanderers">Bolton Wanderers</option>
-        <option value="Chelsea">Chelsea</option>
-        <option value="Everton">Everton</option>
-        <option value="Fulham">Fulham</option>
-        <option value="Hull City">Hull City</option>
-        <option value="Liverpool">Liverpool</option>
-        <option value="Manchester City">Manchester City</option>
-        <option value="Manchester United">Manchester United</option>
-        <option value="Middlesbrough">Middlesbrough</option>
-        <option value="Newcastle United">Newcastle United</option>
-        <option value="Portsmouth">Portsmouth</option>
-        <option value="Stoke City">Stoke City</option>
-        <option value="Sunderland">Sunderland</option>
-        <option value="Tottenham Hotspur">Tottenham Hotspur</option>
-        <option value="West Bromwich Albion">West Bromwich Albion</option>
-        <option value="West Ham United">West Ham United</option>
-        <option value="Wigan Athletic">Wigan Athletic</option>
+        <option value="1">Arsenal</option>
+        <option value="2">Aston Villa</option>
+        <option value="3">Blackburn Rovers</option>
+        <option value="4">Bolton Wanderers</option>
+        <option value="5">Chelsea</option>
+        <option value="6">Everton</option>
+        <option value="7">Fulham</option>
+        <option value="8">Hull City</option>
+        <option value="9">Liverpool</option>
+        <option value="10">Manchester City</option>
+        <option value="11">Manchester United</option>
+        <option value="12">Middlesbrough</option>
+        <option value="13">Newcastle United</option>
+        <option value="14">Portsmouth</option>
+        <option value="15">Stoke City</option>
+        <option value="16">Sunderland</option>
+        <option value="17">Tottenham Hotspur</option>
+        <option value="18">West Bromwich Albion</option>
+        <option value="19">West Ham United</option>
+        <option value="20">Wigan Athletic</option>
     </select>
 
     <label for="position_id">Position:</label>
