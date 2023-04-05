@@ -7,12 +7,12 @@ require_once 'PlayerManager.php';
 $name = $_POST['name'];
 $attack = $_POST['attack'];
 $defence = $_POST['defence'];
-$club_name = $_POST['club_name'];
+$club_id = $_POST['club_id'];
 $position_id = $_POST['position_id'];
 $image = $_POST['image'];
 
 // Create a new Player object with the form data
-$player = new Player($image, $name, $attack, $defence, $club_name, $position_id);
+$player = new Player($image, $name, $attack, $defence, $club_id, $position_id);
 
 
 // Insert the new player into the database
