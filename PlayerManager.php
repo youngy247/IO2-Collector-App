@@ -28,7 +28,7 @@ class PlayerManager
             'name' => $player->getName(),
             'attack' => $player->getAttack(),
             'defence' => $player->getDefence(),
-            'club_id' => $player->getClubName(),
+            'club_name' => $player->getClubName(),
             'position_id' => $player->getPositionId(),
             'image' => $player->getImage(),
         ]);
