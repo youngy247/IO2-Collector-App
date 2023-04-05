@@ -62,7 +62,11 @@ section h2 {
 .card-grid {
   display: grid;
   grid-template-columns: auto;
-  gap: 2rem;
+  gap: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .player-card {
@@ -87,6 +91,9 @@ section h2 {
   .player-card p {
     font-size: 1.5rem;
   }
+  /*.player-name {*/
+  /*  font-size: 3rem;*/
+  /*}*/
   .links-container a {
     font-size: 5vw;
   }
