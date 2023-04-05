@@ -39,12 +39,11 @@ h1 {
   text-align: center;
   font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 900;
-  padding: 5.2rem 0 1rem 0;
   color: #db5921;
 }
 
 section {
-  padding-top: 0.4rem;
+  padding-top: 0.8rem;
 }
 
 .divider {
@@ -56,19 +55,25 @@ section {
 section h2 {
   text-align: center;
   font-size: clamp(1.75rem, 2.5vw, 2.25rem);
-  padding: 2rem 0 0.5rem 0;
+  padding: 1rem 0 0.5rem 0;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: auto;
-  gap: 2rem;
+  gap: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .player-card {
-  padding: 2rem;
+  padding: 0.5rem 2rem 1rem;
   margin: 0 auto;
   text-align: center;
+  border: 1px solid black;
+  background-color: #432223;
 }
 
 .player-card img {
@@ -77,10 +82,17 @@ section h2 {
   max-height: 22rem;
 }
 
+.player-name {
+  font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 600px) {
   .player-card p {
     font-size: 1.5rem;
   }
+  /*.player-name {*/
+  /*  font-size: 3rem;*/
+  /*}*/
   .links-container a {
     font-size: 5vw;
   }
