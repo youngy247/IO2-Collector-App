@@ -14,7 +14,6 @@ require_once 'index.html';
 <hr class="divider" />
 <section>
 
-
 <form action="addPlayer.php" method="post">
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" required>

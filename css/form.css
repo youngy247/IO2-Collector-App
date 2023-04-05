@@ -6,6 +6,7 @@ section {
     padding-top: 2rem;
     padding-bottom: 3rem;
 }
+
 form {
     display: flex;
     flex-direction: column;

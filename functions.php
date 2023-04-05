@@ -6,7 +6,7 @@ function returnHtmlFromArray(array $players): string {
     foreach ($players as $player) {
         $html .= '<div class="player-card">' .
             '<p class="player-name">'. $player->getName() .'</p>' .
-            '<img src="'.$player->getImage().'" alt="A ' . $player->getName() .'">'
+            '<img src="'.$player->getImage().'" alt="' . $player->getName() .'">'
             . '<p>Card number ' . $cardId++ . '</p>'
             . '<p>Attack: ' . $player->getAttack() . '</p>'
             . '<p>Defence: ' . $player->getDefence() . '</p>'
