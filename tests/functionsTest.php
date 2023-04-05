@@ -12,8 +12,9 @@ class functionsTest extends TestCase
         ];
         $expectedHtml = '<div class="card-grid">' .
             '<div class="player-card">' .
-            '<img src="image1.jpg" alt="A Player 1">' .
-            '<p>Name: Player 1</p>' .
+            '<p class="player-name">Player 1</p>' .
+            '<img src="image1.jpg" alt="Player 1">' .
+            '<p>Card number 1</p>'.
             '<p>Attack: 80</p>' .
             '<p>Defence: 70</p>' .
             '<p>Club: club1</p>' .
@@ -34,24 +35,27 @@ class functionsTest extends TestCase
         $expectedHtml =
             '<div class="card-grid">' .
             '<div class="player-card">' .
-            '<img src="image1.jpg" alt="A Player 1">' .
-            '<p>Name: Player 1</p>' .
+            '<p class="player-name">Player 1</p>' .
+            '<img src="image1.jpg" alt="Player 1">' .
+            '<p>Card number 1</p>'.
             '<p>Attack: 80</p>' .
             '<p>Defence: 70</p>' .
             '<p>Club: club1</p>' .
             '<p>Position: Defender</p>' .
             '</div>' .
             '<div class="player-card">' .
-            '<img src="image2.jpg" alt="A Player 2">' .
-            '<p>Name: Player 2</p>' .
+            '<p class="player-name">Player 2</p>' .
+            '<img src="image2.jpg" alt="Player 2">' .
+            '<p>Card number 2</p>'.
             '<p>Attack: 90</p>' .
             '<p>Defence: 80</p>' .
             '<p>Club: club2</p>' .
             '<p>Position: Midfielder</p>' .
             '</div>' .
             '<div class="player-card">' .
-            '<img src="image3.jpg" alt="A Player 3">' .
-            '<p>Name: Player 3</p>' .
+            '<p class="player-name">Player 3</p>' .
+            '<img src="image3.jpg" alt="Player 3">' .
+            '<p>Card number 3</p>'.
             '<p>Attack: 95</p>' .
             '<p>Defence: 85</p>' .
             '<p>Club: club3</p>' .
