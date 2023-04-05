@@ -42,10 +42,10 @@ require_once 'index.html';
     <label for="position_id">Position:</label>
     <select name="position_id" id="position_id" required>
         <option value="">Choose position</option>
-        <option value="Goalkeeper">Goalkeeper</option>
-        <option value="Defender">Defender</option>
-        <option value="Midfielder">Midfielder</option>
-        <option value="Forward">Forward</option>
+        <option value="1">Goalkeeper</option>
+        <option value="2">Defender</option>
+        <option value="3">Midfielder</option>
+        <option value="4">Forward</option>
     </select>
 
     <label for="image">Image URL:</label>
