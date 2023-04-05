@@ -33,7 +33,6 @@ class PlayerManager
             'position_id' => $player->getPositionId(),
             'image' => $player->getImage(),
         ]);
-        $player->setId($this->db->lastInsertId());
         return 'Player added to your collection';
     }
 }
