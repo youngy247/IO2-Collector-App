@@ -5,7 +5,7 @@ require_once 'index.html';
 <body>
 <nav class="navbar">
     <ul class="links-container">
-        <li><a href="#collection">Collection</a></li>
+        <li><a href="index.php">Collection</a></li>
         <li><a href="form.php">Add Card</a></li>
 
     </ul>
