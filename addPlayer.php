@@ -18,3 +18,6 @@ $player = new Player($image, $name, $attack, $defence, $club_id, $position_id);
 $db = new Database();
 $db->insertPlayer($player);
 
+// Redirect the user to the collection page
+header('Location: collection.php');
+exit();
