@@ -15,9 +15,9 @@ class PlayerTest extends TestCase
             'Liverpool',
             'Forward');
         $this->assertEquals('Lionel Messi', $player->getName());
-        $this->assertEquals(99, $player->getAttack());
-        $this->assertEquals(50, $player->getDefence());
-        $this->assertEquals('FC Barcelona', $player->getClubName());
+        $this->assertEquals(50, $player->getAttack());
+        $this->assertEquals(88, $player->getDefence());
+        $this->assertEquals('Liverpool', $player->getClubName());
     }
 
     public function testValidPosition(): void
@@ -72,6 +72,7 @@ class PlayerTest extends TestCase
 
     public function testSetPositionIdWithInvalidPosition()
     {
+        $this->expectException(InvalidArgumentException::class);
         $player = new Player(
             'image123.png',
             'Lionel Messi',
@@ -79,9 +80,6 @@ class PlayerTest extends TestCase
             88,
             'Liverpool',
             'InvalidPosition');
-
-        $this->expectException(InvalidArgumentException::class);
-        $player->setPositionId('InvalidPosition');
     }
 
     public function testMultiplePositions(): void
