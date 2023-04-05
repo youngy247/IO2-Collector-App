@@ -31,6 +31,11 @@ class Player
         return $this->id;
     }
 
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
     public function getName(): string
     {
         return $this->name;
@@ -78,10 +83,10 @@ class Player
 
     public function setPositionId(string $position_id): void
     {
-        $allowedPositions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
-        if (!in_array($position_id, $allowedPositions)) {
-            throw new InvalidArgumentException('Invalid position id');
-        }
+//        $allowedPositions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'];
+//        if (!in_array($position_id, $allowedPositions)) {
+//            throw new InvalidArgumentException('Invalid position id');
+//        }
         $this->position_id = $position_id;
     }
 
