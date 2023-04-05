@@ -4,7 +4,7 @@ require_once 'index.html';
 ?>
 <body>
 
-<form action="add_player.php" method="post">
+<form action="addPlayer.php" method="post">
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" required>
 
