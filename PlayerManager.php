@@ -19,7 +19,7 @@ class PlayerManager
             !$player->getClubName() || !$player->getPositionId() || !$player->getImage()) {
             throw new InvalidArgumentException('Invalid player data');
         }
-        $stmt = $this->pdo->prepare(
+        $stmt = $this->db->prepare(
             'INSERT INTO 
     players (name, attack, defence, club_name, position_id, image) 
              VALUES 
