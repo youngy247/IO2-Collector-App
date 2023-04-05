@@ -14,7 +14,6 @@ $image = $_POST['image'];
 // Create a new Player object with the form data
 $player = new Player($image, $name, $attack, $defence, $club_id, $position_id);
 
-
 // Insert the new player into the database
 $db = new PlayerManager();
 $db->insertPlayer($player);
