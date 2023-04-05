@@ -10,7 +10,7 @@ function returnHtmlFromArray(array $players): string {
             . '<p>Card number ' . $cardId++ . '</p>'
             . '<p>Attack: ' . $player->getAttack() . '</p>'
             . '<p>Defence: ' . $player->getDefence() . '</p>'
-            . '<p>Club: ' . $player->getClubId() . '</p>'
+            . '<p>Club: ' . $player->getClubName() . '</p>'
             . '<p>Position: ' . $player->getPositionId() . '</p>'
             . '</div>';
     }
