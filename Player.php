@@ -7,21 +7,21 @@ class Player
     private string $name;
     private int $attack;
     private int $defence;
-    private string $club_name;
+    private string $club_id;
     private string $position_id;
     // use '?string' to either be string or null for the optional properties when you click on the card
 
     private string $image;
     public function __construct
     (
-        string $image, string $name, int $attack, int $defence, string $club_name, string $position_id, int $id = -1
+        string $image, string $name, int $attack, int $defence, string $club_id, string $position_id, int $id = -1
     )
     {
         $this->id = $id;
         $this->name = $name;
         $this->attack = $attack;
         $this->defence = $defence;
-        $this->club_name = $club_name;
+        $this->club_id = $club_id;
         $this->setPositionId($position_id);
         $this->image = $image;
     }
@@ -61,14 +61,14 @@ class Player
         $this->defence = $defence;
     }
 
-    public function getClubName(): string
+    public function getClubId(): string
     {
-        return $this->club_name;
+        return $this->club_id;
     }
 
-    public function setClubName(string $club_name): void
+    public function setClubId(string $club_id): void
     {
-        $this->club_name = $club_name;
+        $this->club_id = $club_id;
     }
 
     public function getPositionId(): string

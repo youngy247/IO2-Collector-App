@@ -14,8 +14,8 @@ require_once 'index.html';
     <label for="defence">Defence:</label>
     <input type="number" name="defence" id="defence" required>
 
-    <label for="club_name">Club:</label>
-    <select id="club_name" name="club_name">
+    <label for="club_id">Club:</label>
+    <select id="club_id" name="club_id">
         <option value="">Select a club</option>
         <option value="Arsenal">Arsenal</option>
         <option value="Aston Villa">Aston Villa</option>
