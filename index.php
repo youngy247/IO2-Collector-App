@@ -12,7 +12,7 @@ require_once 'index.html';
     <nav class="navbar">
         <ul class="links-container">
             <li><a href="#collection">Collection</a></li>
-            <li><a href="#add-card-section">Add Card</a></li>
+            <li><a href="form.php">Add Card</a></li>
 
         </ul>
     </nav>
