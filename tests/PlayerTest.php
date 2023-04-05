@@ -11,7 +11,7 @@ class PlayerTest extends TestCase
         $this->assertEquals('Lionel Messi', $player->getName());
         $this->assertEquals(99, $player->getAttack());
         $this->assertEquals(50, $player->getDefence());
-        $this->assertEquals('FC Barcelona', $player->getClubId());
+        $this->assertEquals('FC Barcelona', $player->getClubName());
     }
 
     public function testGetId()
@@ -62,14 +62,14 @@ class PlayerTest extends TestCase
     public function testGetClubId()
     {
         $player = new Player('John Doe', 80, 70, '1234', 'Defender');
-        $this->assertEquals('1234', $player->getClubId());
+        $this->assertEquals('1234', $player->getClubName());
     }
 
     public function testSetClubId()
     {
         $player = new Player('John Doe', 80, 70, '1234', 'Defender');
-        $player->setClubId('5678');
-        $this->assertEquals('5678', $player->getClubId());
+        $player->setClubName('5678');
+        $this->assertEquals('5678', $player->getClubName());
     }
 
 
