@@ -5,6 +5,7 @@ require_once 'index.html';
 <body>
 
 <form action="addPlayer.php" method="post">
+    <h1 class="form-header">Add A Player</h1>
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" required>
 
