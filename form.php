@@ -10,10 +10,10 @@ require_once 'index.html';
 
     </ul>
 </nav>
+<h1 class="form-header">Add A Player</h1>
+<hr class="divider" />
+<section>
 
-<section id="collection">
-    <h1 class="form-header">Add A Player</h1>
-    <hr class="divider" />
 
 <form action="addPlayer.php" method="post">
     <label for="name">Name:</label>
