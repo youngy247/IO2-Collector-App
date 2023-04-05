@@ -16,7 +16,7 @@ $player = new Player($image, $name, $attack, $defence, $club_name, $position_id)
 
 
 // Insert the new player into the database
-$db = new Database();
+$db = new PlayerManager();
 $db->insertPlayer($player);
 
 // Redirect the user to the collection page
